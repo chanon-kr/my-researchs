@@ -14,3 +14,5 @@ Install Lib
 ```pip install --no-cache-dir -r requirements.txt```
 Optional
 ```pip install --no-cache-dir notebook```
+Run Streamlit
+```streamlit run app.py```

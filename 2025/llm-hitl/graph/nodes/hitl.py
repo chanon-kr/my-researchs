@@ -2,9 +2,10 @@ from graph.tools.math_tools import math_tools
 from graph.state import GraphState
 from graph.util.models import create_model
 from langgraph.types import interrupt
+import os
 
-MODEL= "gemini-2.5-flash-lite"
-PROVIDER= "google_genai"
+MODEL= os.getenv('COMMON_LLM_MODEL', "gemini-2.5-flash-lite")
+PROVIDER= os.getenv('COMMON_LLM_PROVIDER', "google_genai")
 SYSTEM_PROMPT= "You are a helpful assistant tasked with performing arithmetic on a set of inputs."
 
 def hitl_node(state: GraphState):
